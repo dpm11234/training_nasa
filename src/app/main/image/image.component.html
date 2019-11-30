@@ -1,0 +1,18 @@
+<div>
+  <div *ngIf="length > 0">
+    <img
+      *ngFor="let imgSrc of imagesSrc; index as i"
+      class="w-75"
+      [src]="imgSrc"
+      [hidden]="i !== showIndex"
+    />
+    <div>
+      <button (click)="changeStatusPlay()">
+        {{ isPlay ? "Stop" : "Play" }}
+      </button>
+    </div>
+  </div>
+  <div *ngIf="length === 0">
+    Images not found
+  </div>
+</div>

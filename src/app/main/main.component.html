@@ -1,0 +1,12 @@
+<div class="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <ngb-datepicker  #dp [(ngModel)]="date" [startDate]="date" ></ngb-datepicker>
+      </div>
+      <div class="col-8">
+        <app-image [date]="date" ></app-image>
+      </div>
+    </div>  
+  </div>  
+</div>
